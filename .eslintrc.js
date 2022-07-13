@@ -1,29 +1,18 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+    env: {
+        es2022: true,
+        node: true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    extends: ['eslint:recommended', 'prettier'],
+    ignorePatterns: ['dist'],
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module'
     },
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
+    rules: {
+        indent: ['error', 4],
+        'linebreak-style': ['error', 'unix'],
+        quotes: ['error', 'single'],
+        semi: ['error', 'never']
     }
 }
